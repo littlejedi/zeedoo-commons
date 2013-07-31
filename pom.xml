@@ -18,7 +18,17 @@
 	<scm>
 		<developerConnection>scm:git:git@github.com:littlejedi/core-domain.git</developerConnection>
 		<url>http://github.com/littlejedi/core-domain</url>
+		<tag>HEAD</tag>
+		<connection>scm:git:git@github.com:littlejedi/core-domain.git</connection>
 	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>maven-repo</id>
+			<name>maven-repo</name>
+			<url>file://C:\Users\littejedi\.m2\repository</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<!-- Google -->
