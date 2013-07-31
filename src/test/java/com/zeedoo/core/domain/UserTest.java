@@ -1,8 +1,5 @@
 package com.zeedoo.core.domain;
 
-import static com.yammer.dropwizard.testing.JsonHelpers.asJson;
-import static com.yammer.dropwizard.testing.JsonHelpers.fromJson;
-import static com.yammer.dropwizard.testing.JsonHelpers.jsonFixture;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
@@ -23,7 +20,7 @@ public class UserTest {
 		user.setPassword("password");
 		user.setEmail("email");
 		user.setNickname("nickname");
-		Assert.assertThat("a User can be serialized to JSON", asJson(user), is(equalTo(jsonFixture("fixtures/user.json"))));
+		Assert.assertThat("a User can be serialized to JSON", JsonUtils.asJson(user), is(equalTo(JsonUtils.fixture("fixtures/user.json"))));
 	}
 	
 	@Test
@@ -35,7 +32,7 @@ public class UserTest {
 		user.setEmail("email");
 		user.setNickname("nickname");
 	    Assert.assertThat("a Person can be deserialized from JSON",
-	               fromJson(jsonFixture("fixtures/user.json"), User.class),
+	               JsonUtils.fromJson(JsonUtils.fixture("fixtures/user.json"), User.class),
 	               is(user));
 	}
 

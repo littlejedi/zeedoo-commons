@@ -1,12 +1,7 @@
 package com.zeedoo.core.domain;
 
-import static com.yammer.dropwizard.testing.JsonHelpers.asJson;
-import static com.yammer.dropwizard.testing.JsonHelpers.fromJson;
-import static com.yammer.dropwizard.testing.JsonHelpers.jsonFixture;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
-
-import java.util.UUID;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,7 +13,7 @@ public class DeviceTokenTest {
 		final DeviceToken token = new DeviceToken();
 		token.setTokenId("12345ABCDE");
 		token.setUsername("test");
-		Assert.assertThat("a Device Token can be serialized to JSON", asJson(token), is(equalTo(jsonFixture("fixtures/deviceToken.json"))));
+		Assert.assertThat("a Device Token can be serialized to JSON", JsonUtils.asJson(token), is(equalTo(JsonUtils.fixture("fixtures/deviceToken.json"))));
 	}
 	
 	@Test
@@ -27,7 +22,7 @@ public class DeviceTokenTest {
 		token.setTokenId("12345ABCDE");
 		token.setUsername("test");
 	    Assert.assertThat("a DeviceToken can be deserialized from JSON",
-	               fromJson(jsonFixture("fixtures/deviceToken.json"), DeviceToken.class),
+	               JsonUtils.fromJson(JsonUtils.fixture("fixtures/deviceToken.json"), DeviceToken.class),
 	               is(token));
 	}
 }
