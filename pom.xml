@@ -3,7 +3,7 @@
 
 	<groupId>com.zeedoo</groupId>
 	<artifactId>core-domain</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>core-domain</name>
@@ -17,7 +17,7 @@
 	<scm>
 		<developerConnection>scm:git:git@github.com:littlejedi/core-domain.git</developerConnection>
 		<url>http://github.com/littlejedi/core-domain</url>
-	  <tag>core-domain-0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<dependencies>
