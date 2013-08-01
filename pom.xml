@@ -3,7 +3,7 @@
 
 	<groupId>com.zeedoo</groupId>
 	<artifactId>zeedoo-commons</artifactId>
-	<version>0.1</version>
+	<version>0.11-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>zeedoo-commons</name>
@@ -19,7 +19,7 @@
 		<developerConnection>scm:git:git@github.com:littlejedi/core-domain.git</developerConnection>
 		<url>http://github.com/littlejedi/core-domain</url>
 		<connection>scm:git:git@github.com:littlejedi/core-domain.git</connection>
-	  <tag>zeedoo-commons-0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<distributionManagement>
