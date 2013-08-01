@@ -16,9 +16,9 @@
 	</properties>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:littlejedi/core-domain.git</developerConnection>
-		<url>http://github.com/littlejedi/core-domain</url>
-		<connection>scm:git:git@github.com:littlejedi/core-domain.git</connection>
+		<developerConnection>scm:git:git@github.com:littlejedi/zeedoo-commons.git</developerConnection>
+		<url>http://github.com/littlejedi/zeedoo-commons</url>
+		<connection>scm:git:git@github.com:littlejedi/zeedoo-commons.git</connection>
 	  <tag>HEAD</tag>
   </scm>
 
