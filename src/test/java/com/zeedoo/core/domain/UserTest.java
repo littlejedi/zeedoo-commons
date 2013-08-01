@@ -8,7 +8,7 @@ import java.util.UUID;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.zeedoo.core.domain.User;
+import com.zeedoo.commons.domain.User;
 
 public class UserTest {
 	

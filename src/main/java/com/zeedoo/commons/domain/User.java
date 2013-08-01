@@ -1,4 +1,4 @@
-package com.zeedoo.core.domain;
+package com.zeedoo.commons.domain;
 
 import java.util.Date;
 import java.util.UUID;

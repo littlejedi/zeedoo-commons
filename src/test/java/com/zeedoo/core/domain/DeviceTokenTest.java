@@ -6,6 +6,8 @@ import static org.hamcrest.Matchers.is;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.zeedoo.commons.domain.DeviceToken;
+
 public class DeviceTokenTest {
 	
 	@Test

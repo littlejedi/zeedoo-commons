@@ -1,4 +1,4 @@
-package com.zeedoo.core.domain;
+package com.zeedoo.commons.domain;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

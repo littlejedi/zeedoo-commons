@@ -1,4 +1,4 @@
-package com.zeedoo.core.domain;
+package com.zeedoo.commons.domain;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;

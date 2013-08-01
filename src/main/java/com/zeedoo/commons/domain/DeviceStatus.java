@@ -1,4 +1,6 @@
-package com.zeedoo.core.domain;
+package com.zeedoo.commons.domain;
+
+import com.zeedoo.commons.mybatis.HasValueEnum;
 
 public enum DeviceStatus implements HasValueEnum {
 

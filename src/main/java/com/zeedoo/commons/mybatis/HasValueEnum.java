@@ -1,4 +1,4 @@
-package com.zeedoo.core.domain;
+package com.zeedoo.commons.mybatis;
 
 /**
  * Generic interface to return an integer value for myBatis mapping purposes
