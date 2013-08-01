@@ -3,6 +3,7 @@ package com.zeedoo.commons.domain;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.Objects;
 
 /**
@@ -12,6 +13,7 @@ import com.google.common.base.Objects;
  */
 public class SensorDataRecord {
 	
+	@JsonIgnore
 	//Internal DB id
 	String id;
 	
