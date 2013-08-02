@@ -3,8 +3,6 @@ package com.zeedoo.commons.domain;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.joda.ser.DateTimeSerializer;
 import com.google.common.base.Objects;
 
 /**
@@ -17,37 +15,35 @@ public class SensorStatus {
 	/**
 	 * Internal ID
 	 */
-	String id;
+	private String id;
 	
 	/**
 	 * Sensor Id
 	 */
 	@NotEmpty
-	String sensorId;
+	private String sensorId;
 	
 	/** 
 	 * Human-readable IPv4 Address of the Sun that manages this Sensor
 	 */
-	String sunIpAddress;
+	private String sunIpAddress;
 	
-	Integer sunIpPort;
+	private Integer sunIpPort;
 	
 	/**
 	 * MAC address of the Sun that manages this Sensor
 	 */
-	String sunMacAddress;
+	private String sunMacAddress;
 	
 	/**
 	 * Device status of this Sensor
 	 */
-	@NotEmpty
-	DeviceStatus sensorStatus;
+	private DeviceStatus sensorStatus;
 	
 	/**
 	 * Last updated
 	 */
-	@JsonSerialize(using = DateTimeSerializer.class, as=String.class)
-	DateTime lastUpdated;
+	private DateTime lastUpdated;
 	
 	public SensorStatus() {
 		// hmm

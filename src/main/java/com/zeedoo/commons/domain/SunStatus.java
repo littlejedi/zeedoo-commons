@@ -13,17 +13,17 @@ import com.google.common.base.Objects;
 public class SunStatus {
 	
 	// Internal DB id
-	String id;
+	private String id;
 	
-	String sunId;
+	private String sunId;
 	
-	String sunIpAddress;
+	private String sunIpAddress;
 	
 	// Sun's online/offline status
-	DeviceStatus sunStatus;
+	private DeviceStatus sunStatus;
 	
 	// Last updated timestamp
-	DateTime lastUpdated;
+	private DateTime lastUpdated;
 	
 	public SunStatus() {
 		// myBatis needs this

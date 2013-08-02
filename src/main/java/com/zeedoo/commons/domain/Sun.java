@@ -10,22 +10,22 @@ import com.google.common.base.Objects;
 public class Sun {
 	
 	// Internal DB id
-	String id;
+	private String id;
 	
 	// External Sun Id
-	String sunId;
+	private String sunId;
 	
 	// Sun SSID
-	String sunSsid;
+	private String sunSsid;
 	
 	// Sun geocode (lat,lng)
-	String geoCode;
+	private String geoCode;
 	
 	// Human-readable Sun location
-	String location;
+	private String location;
 	
 	// Sun wireless access code
-	String wirelessCode;
+	private String wirelessCode;
 	
 	public String getId() {
 		return id;

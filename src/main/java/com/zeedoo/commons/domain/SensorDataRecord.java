@@ -15,16 +15,16 @@ public class SensorDataRecord {
 	
 	@JsonIgnore
 	//Internal DB id
-	String id;
+	private String id;
 	
 	//Sensor Id
-	String sensorId;
+	private String sensorId;
 	
 	//UTC Timestamp when the record was taken (time zone info included)
-	DateTime timestamp;
+	private DateTime timestamp;
 	
 	//Value of the recording
-	String value;
+	private String value;
 	
 	public SensorDataRecord() {
 		//
