@@ -3,7 +3,9 @@ package com.zeedoo.commons.domain;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.common.base.Objects;
+import com.zeedoo.commons.jackson.DateTimeDeserializer;
 
 /**
  * Represents a Sensor's connection status
@@ -43,6 +45,7 @@ public class SensorStatus {
 	/**
 	 * Last updated
 	 */
+	@JsonDeserialize(using = DateTimeDeserializer.class)
 	private DateTime lastUpdated;
 	
 	public SensorStatus() {
