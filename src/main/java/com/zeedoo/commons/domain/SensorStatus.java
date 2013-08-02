@@ -1,7 +1,10 @@
 package com.zeedoo.commons.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.joda.ser.DateTimeSerializer;
 import com.google.common.base.Objects;
 
 /**
@@ -19,6 +22,7 @@ public class SensorStatus {
 	/**
 	 * Sensor Id
 	 */
+	@NotEmpty
 	String sensorId;
 	
 	/** 
@@ -36,11 +40,13 @@ public class SensorStatus {
 	/**
 	 * Device status of this Sensor
 	 */
+	@NotEmpty
 	DeviceStatus sensorStatus;
 	
 	/**
 	 * Last updated
 	 */
+	@JsonSerialize(using = DateTimeSerializer.class, as=String.class)
 	DateTime lastUpdated;
 	
 	public SensorStatus() {
