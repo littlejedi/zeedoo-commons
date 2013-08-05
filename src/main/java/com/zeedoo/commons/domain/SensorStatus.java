@@ -4,7 +4,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.base.Objects;
+import com.zeedoo.commons.jackson.DateTimeSerializer;
 import com.zeedoo.commons.jackson.DateTimeDeserializer;
 
 /**
@@ -45,6 +47,7 @@ public class SensorStatus {
 	/**
 	 * Last updated
 	 */
+	@JsonSerialize(using = DateTimeSerializer.class)
 	@JsonDeserialize(using = DateTimeDeserializer.class)
 	private DateTime lastUpdated;
 	

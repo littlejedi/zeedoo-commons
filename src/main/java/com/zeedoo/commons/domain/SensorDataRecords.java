@@ -11,6 +11,10 @@ public class SensorDataRecords {
 	
 	private List<SensorDataRecord> sensorDataRecords;
 	
+	public SensorDataRecords() {
+		// Jackson needs this
+	}
+	
 	public SensorDataRecords(List<SensorDataRecord> records) {
 		sensorDataRecords = records;
 	}

@@ -4,7 +4,11 @@ import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.base.Objects;
+import com.zeedoo.commons.jackson.DateTimeDeserializer;
+import com.zeedoo.commons.jackson.DateTimeSerializer;
 
 /**
  * Represents a single recording (time and value) from a sensor 
@@ -21,6 +25,8 @@ public class SensorDataRecord {
 	private String sensorId;
 	
 	//UTC Timestamp when the record was taken (time zone info included)
+	@JsonSerialize(using = DateTimeSerializer.class)
+	@JsonDeserialize(using = DateTimeDeserializer.class)
 	private DateTime timestamp;
 	
 	//Value of the recording
