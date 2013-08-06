@@ -3,7 +3,12 @@ package com.zeedoo.commons.domain;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.base.Objects;
+import com.zeedoo.commons.jackson.DateTimeDeserializer;
+import com.zeedoo.commons.jackson.DateTimeSerializer;
 
 /**
  * Represents a Sun's connection status
@@ -23,6 +28,8 @@ public class SunStatus {
 	private DeviceStatus sunStatus;
 	
 	// Last updated timestamp
+	@JsonSerialize(using = DateTimeSerializer.class)
+	@JsonDeserialize(using = DateTimeDeserializer.class)
 	private DateTime lastUpdated;
 	
 	public SunStatus() {
@@ -75,6 +82,7 @@ public class SunStatus {
 		this.lastUpdated = lastUpdated;
 	}
 	
+	@JsonIgnore
 	public DateTime getLastUpdatedLocal() {
 		return lastUpdated == null ? null : lastUpdated.toDateTime(DateTimeZone.getDefault());
 	}
