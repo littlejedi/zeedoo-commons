@@ -58,6 +58,7 @@ public class SensorDataRecord {
 		this.sensorId = sensorId;
 	}
 	
+	@JsonIgnore
 	public DateTime getTimestampLocal() {
 		return timestamp.withZone(DateTimeZone.getDefault());
 	}
