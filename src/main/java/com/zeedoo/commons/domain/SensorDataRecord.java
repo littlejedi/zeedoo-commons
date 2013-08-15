@@ -29,6 +29,8 @@ public class SensorDataRecord {
 	@JsonDeserialize(using = DateTimeDeserializer.class)
 	private DateTime timestamp;
 	
+	private Long timestampLong;
+	
 	//Value of the recording
 	private String value;
 	
@@ -39,6 +41,7 @@ public class SensorDataRecord {
 	public SensorDataRecord(String sensorId, DateTime timestamp, String value) {
 		this.sensorId = sensorId;
 		this.timestamp = timestamp;
+		this.timestampLong = timestamp.getMillis();
 		this.value = value;
 	}
 
@@ -67,6 +70,10 @@ public class SensorDataRecord {
 	
 	public Long getTimestampLong() {
 		return timestamp.getMillis();
+	}
+	
+	public void setTimestampLong(Long timestampLong) {
+		this.timestampLong = timestampLong;
 	}
 	
 	public DateTime getTimestamp() {
