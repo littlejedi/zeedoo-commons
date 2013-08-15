@@ -58,11 +58,17 @@ public class SensorDataRecord {
 		this.sensorId = sensorId;
 	}
 	
+	// Convenience fields for Timestamp related data
+	// Ignore local timestamp for JSON serialization
 	@JsonIgnore
 	public DateTime getTimestampLocal() {
 		return timestamp.withZone(DateTimeZone.getDefault());
 	}
-
+	
+	public Long getTimestampLong() {
+		return timestamp.getMillis();
+	}
+	
 	public DateTime getTimestamp() {
 		return timestamp;
 	}
