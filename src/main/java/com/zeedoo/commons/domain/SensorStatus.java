@@ -28,10 +28,13 @@ public class SensorStatus {
 	private String sensorId;
 	
 	/** 
-	 * Human-readable IPv4 Address of the Sun that manages this Sensor
+	 * Internal Sun ipAddress
 	 */
 	private String sunIpAddress;
 	
+	/**
+	 * The service port of the Sun device
+	 */
 	private Integer sunIpPort;
 	
 	/**

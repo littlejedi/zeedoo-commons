@@ -20,9 +20,13 @@ public class SunStatus {
 	// Internal DB id
 	private String id;
 	
-	private String sunId;
+	// Represents Sun's MAC address
+	private String sunMacAddress;
 	
 	private String sunIpAddress;
+	
+	// The port assigned to this Sun device
+	private Integer sunPort;
 	
 	// Sun's online/offline status
 	private DeviceStatus sunStatus;
@@ -36,9 +40,10 @@ public class SunStatus {
 		// myBatis needs this
 	}
 	
-	public SunStatus(String sunIpAddress, String sunId, DeviceStatus status) {
-		this.sunId = sunId;
+	public SunStatus(String sunIpAddress, Integer sunPort, String sunMacAddress, DeviceStatus status) {
+		this.sunMacAddress = sunMacAddress;
 		this.sunIpAddress = sunIpAddress;
+		this.sunPort = sunPort;
 		this.sunStatus = status;
 	}
 	
@@ -48,14 +53,6 @@ public class SunStatus {
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public String getSunId() {
-		return sunId;
-	}
-
-	public void setSunId(String sunId) {
-		this.sunId = sunId;
 	}
 
 	public String getSunIpAddress() {
@@ -73,6 +70,22 @@ public class SunStatus {
 	public void setSunStatus(DeviceStatus sunStatus) {
 		this.sunStatus = sunStatus;
 	}
+	
+	public String getSunMacAddress() {
+		return sunMacAddress;
+	}
+
+	public void setSunMacAddress(String sunMacAddress) {
+		this.sunMacAddress = sunMacAddress;
+	}
+
+	public Integer getSunPort() {
+		return sunPort;
+	}
+
+	public void setSunPort(Integer sunPort) {
+		this.sunPort = sunPort;
+	}
 
 	public DateTime getLastUpdated() {
 		return lastUpdated;
@@ -89,13 +102,13 @@ public class SunStatus {
 
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this).add("sunId", sunId).add("sunIpAddress", sunIpAddress).add("sunStatus", sunStatus)
-				.add("lastUpdated", lastUpdated).toString();
+		return Objects.toStringHelper(this).add("sunMacAddress", sunMacAddress).add("sunIpAddress", sunIpAddress).add("sunPort", sunPort)
+				.add("sunStatus", sunStatus).add("lastUpdated", lastUpdated).toString();
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(id, sunId, sunIpAddress, sunStatus, lastUpdated);
+		return Objects.hashCode(id, sunMacAddress, sunIpAddress, sunPort, sunStatus, lastUpdated);
 	}
 
 	@Override
@@ -108,8 +121,9 @@ public class SunStatus {
 			return false;
 		SunStatus other = (SunStatus) obj;
 		return Objects.equal(this.id, other.id)
-				&& Objects.equal(this.sunId, other.sunId)
+				&& Objects.equal(this.sunMacAddress, other.sunMacAddress)
 				&& Objects.equal(this.sunIpAddress, other.sunIpAddress)
+				&& Objects.equal(this.sunPort, other.sunPort)
 				&& Objects.equal(this.sunStatus, other.sunStatus)
 				&& Objects.equal(this.lastUpdated, other.lastUpdated);
 	}
