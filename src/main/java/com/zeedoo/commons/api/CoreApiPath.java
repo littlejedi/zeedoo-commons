@@ -3,7 +3,7 @@ package com.zeedoo.commons.api;
 public enum CoreApiPath {
 
 	DEVICE_TOKEN("deviceToken"),
-	FIND_BY_SUN_MAC_ADDRESS("findBySunMacAddress"),
+	FIND_BY_MAC_ADDRESS("findByMacAddress"),
 	SENSOR_DATA("sensorData"),
 	SENSOR_STATUS("sensorStatus"),
 	SUN_STATUS("sunStatus"),
