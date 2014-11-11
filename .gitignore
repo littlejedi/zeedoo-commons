@@ -1,6 +1,1 @@
-.classpath
-.project
-.settings
-release.properties
-*.log*
-/target
+/target/

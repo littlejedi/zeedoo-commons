@@ -3,6 +3,7 @@ package com.zeedoo.commons.domain;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.base.Objects;
@@ -19,6 +20,7 @@ public class SensorStatus {
 	/**
 	 * Internal ID
 	 */
+	@JsonIgnore
 	private String id;
 	
 	/**

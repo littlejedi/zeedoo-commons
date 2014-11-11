@@ -7,11 +7,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.google.common.base.Objects;
 
-public class User {
-	
-	//TODO: Make this read-only / add read only annotation
-	private UUID uuid;
-	
+public class User extends Entity {
+
 	@NotEmpty
 	private String username;
 	
@@ -29,14 +26,6 @@ public class User {
 	private Date lastLoginDate;
 	
 	private Date lastLogoutDate;
-
-	public UUID getUuid() {
-		return uuid;
-	}
-	
-	public void setUuid(UUID uuid) {
-		this.uuid = uuid;
-	}
 
 	public String getUsername() {
 		return username;
@@ -96,7 +85,7 @@ public class User {
 		
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(uuid, username, password, email, nickname, registrationDate, lastLoginDate, lastLogoutDate);
+		return Objects.hashCode(username, password, email, nickname, registrationDate, lastLoginDate, lastLogoutDate);
 	}
 
 	@Override
@@ -108,8 +97,7 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equal(this.uuid, other.uuid) 
-				&& Objects.equal(this.email, other.email)
+		return Objects.equal(this.email, other.email)
 				&& Objects.equal(this.username, other.username)
 				&& Objects.equal(this.password, other.password)
 				&& Objects.equal(this.nickname, other.nickname)
@@ -121,7 +109,7 @@ public class User {
 	@Override
 	public String toString() {
 		return Objects.toStringHelper(this).add("email", email).add("username", username)
-				.add("nickname", nickname).add("uuid", uuid).add("registrationDate", registrationDate)
+				.add("nickname", nickname).add("registrationDate", registrationDate)
 				.add("lastLoginDate",lastLoginDate).add("lastLogoutDate",lastLogoutDate).toString();
 	}
 }

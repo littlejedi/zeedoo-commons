@@ -15,7 +15,6 @@ public class UserTest {
 	@Test
 	public void serializesToJSON() throws Exception {
 		final User user = new User();
-		user.setUuid(UUID.fromString("7e128cd0-a475-11e2-9e96-0800200c9a66"));
 		user.setUsername("username");
 		user.setPassword("password");
 		user.setEmail("email");
@@ -26,7 +25,6 @@ public class UserTest {
 	@Test
 	public void deserializesFromJSON() throws Exception {
 	    final User user = new User();
-	    user.setUuid(UUID.fromString("7e128cd0-a475-11e2-9e96-0800200c9a66"));
 		user.setUsername("username");
 		user.setPassword("password");
 		user.setEmail("email");
